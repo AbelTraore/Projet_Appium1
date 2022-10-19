@@ -22,6 +22,7 @@ public class Waits {
 
 
         driver.findElement(views).click();
+
 /*
         for (int i=0; i<3; i++) {
             (new TouchAction(driver))
@@ -32,7 +33,8 @@ public class Waits {
         }*/
         // Explicit Wait
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(textFields)).click();
+       wait.until(ExpectedConditions.visibilityOfElementLocated(textFields))
+               .click();
         //driver.findElement(textFields).click();
     }
 
